@@ -1,0 +1,25 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: #2f363e;
+}
+.container {
+	position: relative;
+	min-width: 300px;
+	min-height: 480px;
+	padding: 40px 30px 30px;
+	border-radius: 20px;
+	background: #2f363e;
+	box-shadow: 25px 25px 75px rgba(0 0 0 /50%), 10px 10px 70px rgba(0 0 0 /50%),
+		inset 5px 5px 10px rgba(0 0 0 /50%),
+		inset 5px 5px 20px rgba(255 255 255 /25%),
+		inset -5px -5px 15px rgba(0 0 0 /75%);
+}
