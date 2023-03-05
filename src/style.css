@@ -8,18 +8,111 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	min-height: 100vh;
+	min-height: 90vh;
 	background: #2f363e;
 }
 .container {
 	position: relative;
 	min-width: 300px;
 	min-height: 480px;
-	padding: 40px 30px 30px;
+	padding: 30px 30px 30px;
 	border-radius: 20px;
 	background: #2f363e;
 	box-shadow: 25px 25px 75px rgba(0 0 0 /50%), 10px 10px 70px rgba(0 0 0 /50%),
 		inset 5px 5px 10px rgba(0 0 0 /50%),
 		inset 5px 5px 20px rgba(255 255 255 /25%),
 		inset -5px -5px 15px rgba(0 0 0 /75%);
+}
+
+.container .calc {
+	position: relative;
+	display: grid;
+}
+.container .calc .value {
+	position: relative;
+	grid-column: span 4;
+	height: 80px;
+	left: 10px;
+	width: calc(100% - 20px);
+	border: none;
+	outline: none;
+	background: #fff;
+	margin-bottom: 15px;
+	border-radius: 10px;
+	text-align: right;
+	padding: 10px;
+	font-size: 2rem;
+	box-shadow: 2px 5px 7px rgb(0 0 0 /50%),
+		inset 5px 5px 5px rgb(255 255 255 /30%), inset -3px -3px 5px rgb(0 0 0 /50%);
+}
+span {
+	color: #fff;
+}
+.container .calc span {
+	position: relative;
+	display: grid;
+	place-items: center;
+	width: 80px;
+	height: 85px;
+	margin: 6px;
+	background: linear-gradient(100deg, #3f3f3f);
+	color: #fff;
+	user-select: none;
+	cursor: pointer;
+	font-size: 20px;
+	font-weight: 500;
+	border-radius: 10px;
+	box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15),
+		inset 0px -8px 8px rgba(0, 0, 0, 0.25), inset -8px 0 8px rgba(0, 0, 0, 0.15),
+		0px 0 2px rgba(0, 0, 0, 0.75), 18px 20px 25px rgba(0, 0, 0, 0.4);
+}
+.container .calc span::before {
+	content: "";
+	position: absolute;
+	top: 8px;
+	left: 8px;
+	bottom: 10px;
+	right: 8px;
+	border-radius: 10px;
+	border-bottom: 1px solid #0004;
+	border-left: 1px solid #0004;
+	border-top: 1px solid #0009;
+	border-right: 1px solid #0004;
+	box-shadow: inset -5px -5px 15px rgba(0, 0, 0, 0.1),
+		inset 10px 5px 10px rgba(0, 0, 0, 0.15);
+}
+.container .calc span:active {
+	filter: brightness(1.5);
+}
+
+.container .calc .clear {
+	grid-column: span 2;
+	width: 180px;
+	background: #f9123c;
+}
+
+.container .calc .backspace {
+	/* grid-column: span 2; */
+	/* width: 180px; */
+	background: rgb(255, 89, 0);
+}
+.container .calc .clear::before {
+	border-bottom: 1px solid #0004;
+	border-left: 1px solid #0004;
+	border-top: 1px solid #0004;
+}
+.container .calc .equals {
+	/* grid-row: span 1; */
+	background: #2196f3;
+}
+.container .calc .equals::before {
+	border-bottom: 1px solid #fff4;
+	border-left: 1px solid #fff4;
+	border-top: 1px solid #fff4;
+}
+.calc span i {
+	position: relative;
+	font-style: normal;
+	font-size: 1.5rem;
+	text-transform: uppercase;
 }
