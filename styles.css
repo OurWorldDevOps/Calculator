@@ -116,3 +116,33 @@ span {
 	font-size: 1.5rem;
 	text-transform: uppercase;
 }
+/*Media Queries for Moblie responsive  */
+@media (max-width: 480px) {
+	.container {
+		padding: 15px;
+		min-height: 70vh;
+	}
+	.container .calc {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.container .calc .value {
+		grid-column: span 4;
+		font-size: 1.5rem;
+		height: 60px;
+	}
+
+	.container .calc span {
+		width: 60px;
+		height: 65px;
+		margin: 3px;
+		font-size: 16px;
+	}
+
+	.container .calc span::before {
+		top: 6px;
+		left: 6px;
+		bottom: 8px;
+		right: 6px;
+	}
+}
